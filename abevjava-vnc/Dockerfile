@@ -36,9 +36,9 @@ RUN apt-get install -y \
 RUN rm -rf /var/lib/apt/lists/*
 
 # setup abevjava
-RUN wget https://www.nav.gov.hu/data/cms489944/abevjava_install-2.88-0.1.noarch.rpm
-RUN alien --scripts abevjava_install-2.88-0.1.noarch.rpm
-RUN dpkg -i abevjava-install_2.88-1.1_all.deb
+RUN wget https://www.nav.gov.hu/data/cms504163/abevjava_install-2.93.0-0.1.noarch.rpm \
+	&& alien --scripts abevjava_install-2.93.0-0.1.noarch.rpm \
+	&& dpkg -i abevjava-install_2.93.0-1.1_all.deb
 
 # setup vnc
 RUN mkdir ~/.vnc
